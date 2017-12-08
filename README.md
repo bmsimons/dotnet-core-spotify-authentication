@@ -20,7 +20,7 @@ dotnet run
 # Configuration guide
 
 Don't forget to replace the client ID and client secret in SpotifyController.cs.
-Oh, and please add the callback URL to the whitelist of your app. You can do that on your [Spotify app dashboard](https://developer.spotify.com/dashboard/applications).
+Oh, and please add the callback URL to the whitelist of your app. You can do that on your [Spotify app dashboard](https://beta.developer.spotify.com/dashboard/applications).
 
 # Any questions?
 
