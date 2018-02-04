@@ -11,8 +11,8 @@ namespace dotnet_core_spotify_authentication.Controllers
 {
     class SpotifyAuthentication
     {
-        public string clientID     = "CLIENT_ID_GOES_HERE";
-        public string clientSecret = "CLIENT_SECRET_GOES_HERE";
+        public string clientID     = "27adc1ba81634561b6f2b93e581bf3cc";
+        public string clientSecret = "4f885fa66efa4243b9cdfe0f8e33b0de";
         public string redirectURL  = "http://localhost:5000/callback";
     }
 
@@ -57,6 +57,7 @@ namespace dotnet_core_spotify_authentication.Controllers
             {
                 using (HttpClient client = new HttpClient())
                 {
+                    Console.WriteLine(Environment.NewLine+"Your basic bearer: "+Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(sAuth.clientID+":"+sAuth.clientSecret)));
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(sAuth.clientID+":"+sAuth.clientSecret)));
 
                     FormUrlEncodedContent formContent = new FormUrlEncodedContent(new[]
